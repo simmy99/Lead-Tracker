@@ -1,0 +1,118 @@
+bgcontainer {
+  background-color: rgb(223, 222, 222);
+}
+
+.navbar {
+  background-color: #1b1919;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-toggler-icon {
+  background-color: #fff;
+}
+
+.navbar-nav .nav-link {
+  color: #fff !important;
+  font-weight: 500;
+  margin-right: 20px;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #fff !important;
+}
+
+.navbar-nav .nav-item.active .nav-link {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+.navbar-brand img.logo {
+  max-height: 30px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.move-left {
+  position: absolute;
+  left: 300px;
+  font-weight: bold;
+  color: grey;
+}
+
+.custom-btn {
+  margin: 5px;
+  color: rgb(12, 12, 12);
+  border-color: white;
+}
+
+.progress-container {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+
+.horizontal-progress {
+  width: 80%;
+  height: 60px;
+}
+
+.bar-graph {
+  display: flex;
+  align-items: flex-end;
+  height: 200px;
+}
+
+.vertical-bar {
+  width: 60px;
+  background-color: #007bff;
+  margin-right: 50px;
+  position: relative;
+}
+
+.bar-label {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.active-lead-status {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+.status-column {
+  flex: 1;
+  text-align: center;
+}
+
+.lead-status-column {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(9, 9, 9);
+
+  text-align: center;
+  transition: background-color 0.3s; /* Add a transition for smooth color change */
+}
+
+.lead-status-label {
+  font-size: 18px;
+}
+
+.lead-status-count {
+  font-size: 24px;
+}
+
+/* Add a hover effect */
+.lead-status-column:hover {
+  background-color: #007bff; 
+}
