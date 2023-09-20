@@ -1,0 +1,90 @@
+
+CIED ASSIGNMENT QUESTIONS
+==============================
+
+Q1.Output of following code
+
+(function() {
+	console.log(1);
+	setTimeout(function(){console.log(2)}, 1000);
+	setTimeout(function(){console.log(3)}, 0);
+	console.log(4);
+})();
+
+ANS:
+
+1
+4
+3
+2
+
+====================================================================================================
+
+Q2.Given a string, reverse each word in the sentence.
+For example Welcome to this Javascript Guide!should be become emocleW ot siht tpircsavaJ !ediuG
+
+ANS: Javascript code
+
+function reverseWordsInSentence(sentence) {
+  return sentence.split(' ').map(word => word.split('').reverse().join('')).join(' ');
+}
+
+const inputSentence = "Welcome to this Javascript Guide!";
+const reversedSentence = reverseWordsInSentence(inputSentence);
+console.log(reversedSentence);
+
+====================================================================================================
+
+Q3.Please transform the object as shown in the example.The input object can have any level of parents and is not fixed
+
+ANS: Javascript code
+
+function transformMenuStructure(inputObj) {
+    function transformMenu(menuItem) {
+        const transformedItem = {
+            name: menuItem.name,
+            id: menuItem.id
+        };
+        if (menuItem.parent) {
+            transformedItem.child = transformMenu(menuItem.parent);
+        }
+        return transformedItem;
+    }
+
+    const output = inputObj.map(menuItem => transformMenu(menuItem));
+    return output;
+}
+
+const inputObj = [
+    {
+        name: "Menu3",
+        id: "1",
+        parent: {
+            name: "Menu2",
+            id: "2",
+            parent: {
+                name: "Menu1",
+                id: "3"
+            }
+        }
+    },
+    {
+        name: "Menu44",
+        id: "11",
+        parent: {
+            name: "Menu33",
+            id: "22",
+            parent: {
+                name: "Menu22",
+                id: "33",
+                parent: {
+                    name: "Menu11",
+                    id: "44"
+                }
+            }
+        }
+    }
+];
+
+const outputObj = transformMenuStructure(inputObj);
+console.log(JSON.stringify(outputObj, null, 2));
